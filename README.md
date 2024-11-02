@@ -79,7 +79,7 @@ User.Read
 
 SQL Required Permissions:
 ```
-ALTER ROLE [db_Owner] ADD MEMBER [oginaccount] 
+ALTER ROLE [db_Owner] ADD MEMBER [loginaccount] 
 ALTER ROLE [db_datareader] ADD MEMBER [loginaccount]  
 ALTER ROLE [db_datawriter] ADD MEMBER [loginaccount]  
 ALTER ROLE [db_ddladmin]   ADD MEMBER [loginaccount]  
