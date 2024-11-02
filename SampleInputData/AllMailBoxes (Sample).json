@@ -1,0 +1,17 @@
+[
+	{
+		"DisplayName": "Sachin Tendulkar",
+		"ExternalDirectoryObjectId": "b4b488a1-b5e5-4297-8d22-f99ba5cf154e",
+		"PrimarySmtpAddress": "Sachin@Sample.com"
+	},
+	{
+		"DisplayName": "Johanna Lorenz",
+		"ExternalDirectoryObjectId": "3a3d9d3c-dea8-40c1-9885-30748a2c1635",
+		"PrimarySmtpAddress": "JohannaL@Sample.com"
+	},
+	{
+		"DisplayName": "Charlie Brown",
+		"ExternalDirectoryObjectId": "48580fcd-1229-4dea-b213-03982d5b3b6e",
+		"PrimarySmtpAddress": "Charlie@Sample.com"
+	}
+]
