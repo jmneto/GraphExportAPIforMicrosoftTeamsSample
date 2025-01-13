@@ -5,6 +5,7 @@
 This sample application demonstrates how to use the Microsoft Graph Export API to extract and process messages from Microsoft Teams. The application is designed to handle large volumes of data efficiently by utilizing multitasking and batch processing.
 
 # Key Features
+
 1.	**Data Extraction:**  Extract messages from Microsoft Teams using the Microsoft Graph Export API.
 2.	**Data Storage:**  Store the extracted messages in an SQL database.
 3.	**Logging:**  Log the application's activities to both the console and Azure Storage.
@@ -14,24 +15,27 @@ This sample application demonstrates how to use the Microsoft Graph Export API t
 # Configuration Settings
 
 ## Data Input and Output Configuration
+
 - **InputStorageAccountUrl:** URL of the Azure Storage Account containing the input files.  
 - **InputStorageConnectionString:** Connection string to the Azure Storage Account containing the input files. Takes precedence over InputStorageAccountUrl.
 - **InputStorageContainer:** Container where the input files are stored. Default is inputcontainer. 
 
 ## Input Files Wildcards
-- **MailBoxesWildCardPattern:** Wildcard pattern for the input files containing the mailboxes to be processed. Default is **AllMailBoxes\*.json**  .  
+
+- **MailBoxesWildCardPattern:** Wildcard pattern for the input files containing the mailboxes to be processed. Default is **MailBoxes\*.json**  .  
 
 ## Logs Container Configuration
+
 - **LogStorageAccountUrl:** URL of the Azure Storage Account containing the Sample Application logs container location.
 - **LogStorageConnectionString:** Connection string to the Azure Storage Account containing the Sample Application logs container location. Takes precedence over LogStorageAccountUrl.
-- **LogStorageContainer:** Container where the Sample Application logs are created. Default is logs. 
+- **LogStorageContainer:** Container where the Sample Application logs are created. Default is 'logs'. 
 
 **Example:** 
 ```
 "InputStorageAccountUrl": "", 
 "InputStorageConnectionString": "",
 "InputStorageContainer": "inputcontainer",
-"MailBoxesWildCardPattern" : "AllMailBoxes*.json",
+"MailBoxesWildCardPattern" : "MailBoxes*.json",
 "LogStorageAccountUrl": "", 
 "LogStorageConnectionString": "",
 "LogStorageContainer": "logs",
@@ -61,7 +65,6 @@ This sample application demonstrates how to use the Microsoft Graph Export API t
 Required permissions for the application to access the Microsoft Teams Export API**
 
 ```
-Calendars.Read 
 Chat.Read.All
 User.Read
 ```
@@ -107,7 +110,7 @@ The log File name is Logfile_{guid}_index.log. If the application cannot open th
 
 ## MailBox
 
-Stores the mailboxes imported from AllMailBoxes.json. Controls calls to Graph user APIs.
+Stores the mailboxes imported from MailBoxes.json. Controls calls to Graph user APIs.
 
 ## UserMessage
 
@@ -131,15 +134,15 @@ The project includes a sample JSON file to help you understand the structure and
 
 ## Sample JSON File Structure
 
-The sample JSON file, typically named AllMailBoxes.json, contains an array of mailbox objects. Each mailbox object includes essential information such as the mailbox ID, user ID, and other relevant details required for the data extraction process.
+The sample JSON file, typically named MailBoxes.json, contains an array of mailbox objects. Each mailbox object includes essential information such as the mailbox ID, user ID, and other relevant details required for the data extraction process.
 
 **Example:**
 ```
 [
 	{
-		"DisplayName": "Sachin Tendulkar",
+		"DisplayName": "Joe Tendulkar",
 		"ExternalDirectoryObjectId": "b4b488a1-b5e5-4297-8d22-f99ba5cf154e",
-		"PrimarySmtpAddress": "Sachin@Sample.com"
+		"PrimarySmtpAddress": "Tendulkar@Sample.com"
 	},
 	{
 		"DisplayName": "Johanna Lorenz",

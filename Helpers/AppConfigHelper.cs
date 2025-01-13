@@ -120,7 +120,7 @@ internal static class AppConfigHelper
         public string LogStorageContainer { get; set; } = "logs";
 
         // Input Files 
-        public string MailBoxesWildCardPattern { get; set; } = "AllMailBoxes*.json";
+        public string MailBoxesWildCardPattern { get; set; } = "MailBoxes*.json";
 
         // Task Limits
         public int MailBoxLoaderTaskLimit

@@ -22,7 +22,7 @@
 
 namespace GraphExportAPIforMicrosoftTeamsSample.Types;
 
-// This is the definition of these tables in the database plus the object we use to store user mailbox info from AllMailboxes.json
+// This is the definition of these tables in the database plus the object we use to store user mailbox info from Mailboxes.json
 // It's the code first definition of these tables in the database
 public class MailBox
 {
